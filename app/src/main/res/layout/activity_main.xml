@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.808" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:text="Button"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.843" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button2"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:text="2 players"
