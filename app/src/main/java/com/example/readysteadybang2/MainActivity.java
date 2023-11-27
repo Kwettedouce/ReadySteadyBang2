@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openInGameFragment();
+                openActivity2();
             }
         });
     }
 
-    public void openInGameFragment(){
-        Intent intent = new Intent(this, InGameFragment.class);
+    public void openActivity2(){
+        Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
     }
 }
