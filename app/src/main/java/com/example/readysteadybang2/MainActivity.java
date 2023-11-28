@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
     private Button button;
     private Button button2;
     private Button button3;
