@@ -31,4 +31,8 @@ public class Activity11 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

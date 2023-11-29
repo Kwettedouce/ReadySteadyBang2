@@ -67,6 +67,10 @@ public class MainActivity2 extends AppCompatActivity {
         }, delayMillis);
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     public void onImage1Click(View view){
         Intent intent = new Intent(this, Activity21.class);

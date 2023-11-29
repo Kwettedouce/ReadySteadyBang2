@@ -65,6 +65,11 @@ public class Activity3 extends AppCompatActivity {
         }, delayMillisbis);
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
+
     private int generateRandomDelay() {
         // Créer une instance de la classe Random
         Random random = new Random();

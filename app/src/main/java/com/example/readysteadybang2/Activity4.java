@@ -11,4 +11,9 @@ public class Activity4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_4);
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
