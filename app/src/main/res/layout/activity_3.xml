@@ -14,8 +14,6 @@
         android:layout_marginTop="16dp"
         android:rotation="180"
         android:src="@drawable/cowboysprite"
-        android:clickable="true"
-        android:onClick="onImage1Click"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintDimensionRatio="H,16:9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +28,7 @@
         android:layout_height="0dp"
         android:src="@drawable/cowboysprite"
         android:clickable="true"
-        android:onClick="onImage2Click"
+        android:onClick="onImageClickbis"
         app:layout_constraintTop_toBottomOf="@+id/imageView1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +38,7 @@
         android:layout_marginTop="16dp"/>
 
     <TextView
-        android:id="@+id/textReady"
+        android:id="@+id/textReadybis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
