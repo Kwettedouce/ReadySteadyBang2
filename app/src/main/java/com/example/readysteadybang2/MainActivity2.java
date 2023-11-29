@@ -22,15 +22,48 @@ public class MainActivity2 extends AppCompatActivity {
         textReady = findViewById(R.id.textReady);
 
         long delayMillis = 3000;
+        long delayMillis2 = 500;
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 // Affichage du texte après le délai
                 textReady.setText("READY");
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Disparition du premier texte
+                        textReady.setText("");
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                // Affichage du deuxième texte
+                                textReady.setText("STEADY");
+
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        // Affichage du deuxième texte
+                                        textReady.setText("");
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                // Affichage du deuxième texte
+                                                textReady.setText("BANG !");
+                                            }
+                                        }, delayMillis2);
+                                    }
+                                }, delayMillis);
+                            }
+                        }, delayMillis);
+                    }
+                }, delayMillis);
             }
         }, delayMillis);
     }
+
 
     public void onImage1Click(View view){
         Intent intent = new Intent(this, Activity21.class);
