@@ -26,6 +26,11 @@ public class Activity22 extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
+
     public void openActivity2(){
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
