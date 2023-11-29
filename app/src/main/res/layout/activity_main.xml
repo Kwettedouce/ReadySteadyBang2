@@ -10,7 +10,8 @@
 
     <Button
         android:id="@+id/button"
-        android:text="1 joueur"
+        android:text="1 JOUEUR"
+        android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="137dp"
         android:layout_width="0dp"
@@ -18,13 +19,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        android:textColor="#444141"
+        android:background="@color/greyTexte"/>
 
     <Button
         android:id="@+id/button3"
-        android:text="Reserved"
+        android:text="RESERVED"
+        android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="366dp"
         android:layout_width="0dp"
@@ -32,13 +36,16 @@
         app:layout_constraintTop_toBottomOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        android:textColor="#444141"
+        android:background="@color/greyTexte"/>
 
     <Button
         android:id="@+id/button2"
-        android:text="2 joueurs"
+        android:text="2 JOUEURS"
+        android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="251dp"
         android:layout_width="0dp"
@@ -46,15 +53,19 @@
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        android:textColor="#444141"
+        android:background="@color/greyTexte"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready Steady Bang 2"
+        android:text="READY STEADY BANG 2"
+        android:fontFamily="@font/pixelmania"
+        android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
