@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/button"
-        android:text="1 JOUEUR"
+        android:text="2 JOUEURS"
         android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="137dp"
@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:text="2 JOUEURS"
+        android:text="1 JOUEUR"
         android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="251dp"
