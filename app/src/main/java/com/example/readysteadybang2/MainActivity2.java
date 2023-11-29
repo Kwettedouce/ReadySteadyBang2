@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity2 extends AppCompatActivity {
     private TextView textReady;
     public boolean isFirstActivityOpened = false;
@@ -21,8 +23,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         textReady = findViewById(R.id.textReady);
 
-        long delayMillis = 3000;
-        long delayMillis2 = 500;
+        long delayMillis = 1500;
+        long delay2Millis = 10;
+        int randomDelay = generateRandomDelay();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -53,7 +56,7 @@ public class MainActivity2 extends AppCompatActivity {
                                                 // Affichage du deuxième texte
                                                 textReady.setText("BANG !");
                                             }
-                                        }, delayMillis2);
+                                        }, randomDelay);
                                     }
                                 }, delayMillis);
                             }
@@ -79,5 +82,13 @@ public class MainActivity2 extends AppCompatActivity {
             isSecondeActivityOpened = true;
         }
 
+    }
+
+    private int generateRandomDelay() {
+        // Créer une instance de la classe Random
+        Random random = new Random();
+
+        // Générer un nombre aléatoire entre 0 et 5000
+        return random.nextInt(5000);
     }
 }
