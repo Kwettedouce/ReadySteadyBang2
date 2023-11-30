@@ -6,4 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".Activity12">
 
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="632dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/greyTexte"
+        android:fontFamily="@font/pixelmania"
+        android:text="REJOUER"
+        android:textColor="#444141"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="524dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/greyTexte"
+        android:fontFamily="@font/pixelmania"
+        android:text="MENU"
+        android:textColor="#444141"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pixelmania"
+        android:gravity="center"
+        android:text="LE JOUEUR A PERDU"
+        android:textColor="#444141"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
