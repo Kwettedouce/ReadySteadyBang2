@@ -6,4 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".ActivityReadyPve">
 
+    <Button
+        android:id="@+id/ReadyToPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/greyTexte"
+        android:fontFamily="@font/pixelmania"
+        android:text="START PLAYING"
+        android:textColor="#444141"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pixelmania"
+        android:gravity="center"
+        android:text="CLICK START WHEN YOU ARE READY"
+        android:textColor="#444141"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/joueur2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="652dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pixelmania"
+        android:gravity="center"
+        android:text="JOUEUR 1"
+        android:textColor="#444141"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/joueur1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/pixelmania"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="AI PLAYER"
+        android:textColor="#444141"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
