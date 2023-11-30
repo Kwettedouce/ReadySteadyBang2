@@ -15,6 +15,7 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView textReady;
     public boolean isFirstActivityOpened = false;
     public boolean isSecondeActivityOpened = false;
+    public boolean readyToStart = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,6 @@ public class MainActivity2 extends AppCompatActivity {
         textReady = findViewById(R.id.textReady);
 
         long delayMillis = 1500;
-        long delay2Millis = 10;
         int randomDelay = generateRandomDelay();
 
         new Handler().postDelayed(new Runnable() {
@@ -72,14 +72,15 @@ public class MainActivity2 extends AppCompatActivity {
         return;
     }
 
-    public void onImage1Click(View view){
+    public void onImage1Click(View view) {
         Intent intent = new Intent(this, Activity21.class);
         if (!isSecondeActivityOpened) {
             startActivity(intent);
             isFirstActivityOpened = true;
         }
     }
-    public void onImage2Click(View view){
+
+    public void onImage2Click(View view) {
         Intent intent = new Intent(this, Activity22.class);
         if (!isFirstActivityOpened) {
             startActivity(intent);
@@ -95,4 +96,5 @@ public class MainActivity2 extends AppCompatActivity {
         // Générer un nombre aléatoire entre 0 et 5000
         return random.nextInt(5000);
     }
+
 }
