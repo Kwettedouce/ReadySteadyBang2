@@ -15,7 +15,7 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView textReady;
     public boolean isFirstActivityOpened = false;
     public boolean isSecondeActivityOpened = false;
-    public boolean readyToStart = false;
+    public boolean tooSoon = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
                                             public void run() {
                                                 // Affichage du deuxième texte
                                                 textReady.setText("BANG !");
+                                                tooSoon = false;
                                             }
                                         }, randomDelay);
                                     }
@@ -73,20 +74,37 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onImage1Click(View view) {
-        Intent intent = new Intent(this, Activity22.class);
-        if (!isSecondeActivityOpened) {
-            startActivity(intent);
-            isFirstActivityOpened = true;
+        if (tooSoon) {
+            Intent intent = new Intent(this, Activity21.class);
+            if (!isSecondeActivityOpened) {
+                startActivity(intent);
+                isFirstActivityOpened = true;
+            }
+        }
+        else{
+            Intent intent = new Intent(this, Activity22.class);
+            if (!isSecondeActivityOpened) {
+                startActivity(intent);
+                isFirstActivityOpened = true;
+            }
         }
     }
 
     public void onImage2Click(View view) {
-        Intent intent = new Intent(this, Activity21.class);
-        if (!isFirstActivityOpened) {
-            startActivity(intent);
-            isSecondeActivityOpened = true;
+        if (tooSoon) {
+            Intent intent = new Intent(this, Activity22.class);
+            if (!isFirstActivityOpened) {
+                startActivity(intent);
+                isSecondeActivityOpened = true;
+            }
         }
-
+        else{
+            Intent intent = new Intent(this, Activity21.class);
+            if (!isFirstActivityOpened) {
+                startActivity(intent);
+                isSecondeActivityOpened = true;
+            }
+        }
     }
 
     private int generateRandomDelay() {
