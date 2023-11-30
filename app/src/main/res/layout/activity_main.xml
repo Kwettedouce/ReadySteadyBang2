@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/button3"
-        android:text="RESERVED"
+        android:text="REGLES DU JEU"
         android:fontFamily="@font/pixelmania"
         tools:layout_editor_absoluteX="120dp"
         tools:layout_editor_absoluteY="366dp"
