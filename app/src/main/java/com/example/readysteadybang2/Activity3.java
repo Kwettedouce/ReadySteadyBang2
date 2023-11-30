@@ -13,6 +13,7 @@ import java.util.Random;
 public class Activity3 extends AppCompatActivity {
 
     private TextView textReadybis;
+    public boolean tooSoon = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class Activity3 extends AppCompatActivity {
                                             public void run() {
                                                 // Affichage du deuxième texte
                                                 textReadybis.setText("BANG !");
+                                                tooSoon = false;
                                             }
                                         }, randomDelaybis);
                                     }
@@ -79,7 +81,13 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void onImageClickbis(View view) {
-        Intent intent = new Intent(this, Activity11.class);
-        startActivity(intent);
+        if (tooSoon) {
+            Intent intent = new Intent(this, Activity12.class);
+            startActivity(intent);
+        }
+        else{
+            Intent intent = new Intent(this, Activity11.class);
+            startActivity(intent);
+        }
     }
 }

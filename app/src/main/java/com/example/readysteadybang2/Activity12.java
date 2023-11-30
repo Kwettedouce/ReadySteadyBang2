@@ -16,7 +16,7 @@ public class Activity12 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_11);
+        setContentView(R.layout.activity_12);
 
         buttonBack = (Button) findViewById(R.id.buttonBack);
         buttonMenu = (Button) findViewById(R.id.buttonMenu);
