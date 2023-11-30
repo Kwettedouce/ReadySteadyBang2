@@ -43,17 +43,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="240dp"
         android:layout_marginEnd="16dp"
-        android:gravity="center"
         android:fontFamily="@font/pixelmania"
-        android:text="UN DUEL ENTRE 2 COWBOYS\n\n
-        LE PREMIER A 3 MANCHES GAGNE\n\n
-        VOUS TIREREZ AU SIGNAL ''BANG''\n\n
-        SI VOUS TIRER TROP TOT VOUS PERDEZ\n\n
-        "
+        android:gravity="center"
+        android:text="AFFRONTE UN AMI EN DUEL SUR UN SEUL ECRAN EN MODE 2 JOUEURS OU AFFINE TA GACHETTE CONTRE L'ORDI
+        \n\nSOIT LE PREMIER A TIRER APRES AVOIR ENTENDU LE COMPTE A REBOURS 'READY, STEADY, BANG'"
         android:textColor="#444141"
-        android:textSize="8sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

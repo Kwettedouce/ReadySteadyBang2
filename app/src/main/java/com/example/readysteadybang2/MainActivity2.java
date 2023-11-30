@@ -73,7 +73,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onImage1Click(View view) {
-        Intent intent = new Intent(this, Activity21.class);
+        Intent intent = new Intent(this, Activity22.class);
         if (!isSecondeActivityOpened) {
             startActivity(intent);
             isFirstActivityOpened = true;
@@ -81,7 +81,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void onImage2Click(View view) {
-        Intent intent = new Intent(this, Activity22.class);
+        Intent intent = new Intent(this, Activity21.class);
         if (!isFirstActivityOpened) {
             startActivity(intent);
             isSecondeActivityOpened = true;
