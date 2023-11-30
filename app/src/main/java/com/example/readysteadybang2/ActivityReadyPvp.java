@@ -11,4 +11,9 @@ public class ActivityReadyPvp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ready_pvp);
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

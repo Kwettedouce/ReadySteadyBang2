@@ -11,34 +11,34 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
-    private Button button2;
-    private Button button3;
+    private Button buttonPvP;
+    private Button buttonPvE;
+    private Button buttonRules;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.button);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonPvP = (Button) findViewById(R.id.buttonPvP);
+        buttonPvE = (Button) findViewById(R.id.buttonPvE);
+        buttonRules = (Button) findViewById(R.id.buttonRules);
+        buttonPvP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity2();
+                openActivityPvP();
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        buttonPvE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity3();
+                openActivityPvE();
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
+        buttonRules.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity4();
+                openActivityRules();
             }
         });
     }
@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
         return;
     }
 
-    public void openActivity2(){
-        Intent intent = new Intent(this, MainActivity2.class);
+    public void openActivityPvP(){
+        Intent intent = new Intent(this, ActivityReadyPvp.class);
         startActivity(intent);
     }
-    public void openActivity3(){
-        Intent intent = new Intent(this, Activity3.class);
+    public void openActivityPvE(){
+        Intent intent = new Intent(this, ActivityReadyPve.class);
         startActivity(intent);
     }
-    public void openActivity4(){
+    public void openActivityRules(){
         Intent intent = new Intent(this, Activity4.class);
         startActivity(intent);
     }

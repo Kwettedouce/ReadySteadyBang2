@@ -11,4 +11,9 @@ public class ActivityReadyPve extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ready_pve);
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
