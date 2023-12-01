@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import java.util.Random;
 
@@ -15,11 +16,14 @@ public class Activity3 extends AppCompatActivity {
     private TextView textReadybis;
     public boolean tooSoon = true;
     public boolean shotBot = false;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.coupsfeu);
 
         textReadybis = findViewById(R.id.textReadybis);
 
@@ -98,6 +102,7 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void onImageClickbis(View view) {
+        mediaPlayer.start();
         if (tooSoon || shotBot) {
             Intent intent = new Intent(this, Activity12.class);
             startActivity(intent);
