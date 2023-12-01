@@ -106,8 +106,8 @@ public class Activity3 extends AppCompatActivity {
         // Créer une instance de la classe Random
         Random random = new Random();
 
-        // Générer un nombre aléatoire entre 0 et 1000
-        return random.nextInt(1000);
+        // Générer un nombre aléatoire entre 0 et 1100
+        return random.nextInt(1100);
     }
 
     public void onImageClickbis(View view) {
