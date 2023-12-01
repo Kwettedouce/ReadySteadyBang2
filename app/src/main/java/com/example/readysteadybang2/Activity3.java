@@ -14,6 +14,7 @@ public class Activity3 extends AppCompatActivity {
 
     private TextView textReadybis;
     public boolean tooSoon = true;
+    public boolean shotBot = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class Activity3 extends AppCompatActivity {
         long delayMillisbis = 1500;
         long delay2Millisbis = 10;
         int randomDelaybis = generateRandomDelay();
+        int randomDelayBot = generateRandomDelayBot();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -55,6 +57,13 @@ public class Activity3 extends AppCompatActivity {
                                                 // Affichage du deuxième texte
                                                 textReadybis.setText("BANG !");
                                                 tooSoon = false;
+
+                                                new Handler().postDelayed(new Runnable() {
+                                                    @Override
+                                                    public void run(){
+                                                        shotBot = true;
+                                                    }
+                                                }, randomDelayBot);
                                             }
                                         }, randomDelaybis);
                                     }
@@ -80,8 +89,16 @@ public class Activity3 extends AppCompatActivity {
         return random.nextInt(5000);
     }
 
+    private int generateRandomDelayBot() {
+        // Créer une instance de la classe Random
+        Random random = new Random();
+
+        // Générer un nombre aléatoire entre 0 et 1000
+        return random.nextInt(1000);
+    }
+
     public void onImageClickbis(View view) {
-        if (tooSoon) {
+        if (tooSoon || shotBot) {
             Intent intent = new Intent(this, Activity12.class);
             startActivity(intent);
         }
