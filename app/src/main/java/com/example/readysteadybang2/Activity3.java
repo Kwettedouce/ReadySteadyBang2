@@ -16,14 +16,20 @@ public class Activity3 extends AppCompatActivity {
     private TextView textReadybis;
     public boolean tooSoon = true;
     public boolean shotBot = false;
-    private MediaPlayer mediaPlayer;
+    private MediaPlayer readyVoice;
+    private MediaPlayer steadyVoice;
+    private MediaPlayer bangVoice;
+    private MediaPlayer shoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.coupsfeu);
+        readyVoice = MediaPlayer.create(this, R.raw.readyvoice);
+        steadyVoice = MediaPlayer.create(this, R.raw.steadyvoice);
+        bangVoice = MediaPlayer.create(this, R.raw.bangvoice);
+        shoot = MediaPlayer.create(this, R.raw.coupsfeu);
 
         textReadybis = findViewById(R.id.textReadybis);
 
@@ -36,6 +42,7 @@ public class Activity3 extends AppCompatActivity {
             @Override
             public void run() {
                 // Affichage du texte après le délai
+                readyVoice.start();
                 textReadybis.setText("READY");
 
                 new Handler().postDelayed(new Runnable() {
@@ -48,6 +55,7 @@ public class Activity3 extends AppCompatActivity {
                             @Override
                             public void run() {
                                 // Affichage du deuxième texte
+                                steadyVoice.start();
                                 textReadybis.setText("STEADY");
 
                                 new Handler().postDelayed(new Runnable() {
@@ -59,6 +67,7 @@ public class Activity3 extends AppCompatActivity {
                                             @Override
                                             public void run() {
                                                 // Affichage du deuxième texte
+                                                bangVoice.start();
                                                 textReadybis.setText("BANG !");
                                                 tooSoon = false;
 
@@ -102,7 +111,7 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void onImageClickbis(View view) {
-        mediaPlayer.start();
+        shoot.start();
         if (tooSoon || shotBot) {
             Intent intent = new Intent(this, Activity12.class);
             startActivity(intent);
